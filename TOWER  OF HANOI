@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+
+void TOH(int n,char x,char y ,char z)
+{
+    if(n==1)
+    {
+        cout<<"FROM "<<x<<" TO "<<y<<endl;    
+        
+    }
+    else
+    { TOH( n-1, x, z , y);
+     cout<<"FROM "<<x<<" TO "<<y<<endl;
+     TOH(n-1,z,y,x);
+        
+    }
+    
+}
+
+int main()
+{
+    int n;
+cout<<"Enter the no. of disk\n";
+cin>>n;
+char x,y,z;
+TOH(n,'x','y','z');
+
+}
